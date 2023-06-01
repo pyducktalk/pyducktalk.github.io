@@ -1,0 +1,22 @@
+{
+  "name": "pyducktalk",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "build": "vitepress build .",
+    "dev": "vitepress dev .",
+    "preview": "vitepress preview ."
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.39.4",
+    "eslint": "^8.41.0",
+    "sass": "^1.62.1",
+    "vitepress": "^1.0.0-beta.1",
+    "vue": "^3.3.4"
+  }
+}
