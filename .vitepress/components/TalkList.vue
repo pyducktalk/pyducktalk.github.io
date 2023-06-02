@@ -1,4 +1,6 @@
 <template>
+    <!-- <a @click="replay()"> 没看够再看一遍</a> -->
+
     <div class="chat-box" ref="chatBox">
         <transition-group name="chat-bubble" tag="div">
 
@@ -36,30 +38,31 @@ typeArray = [...new Set(typeArray)]
 // console.log(talkObj, typeArray)
 
 export default {
-
-
-
     data() {
         return {
             colorInfo: colorInfo,
             messages: talkObj
         }
     },
+    methods: {
+        replay() {
+            // 逐一显示聊天气泡
+            const chatBubbles = document.querySelectorAll('.chat-box .message');
+            chatBubbles.forEach((bubble, index) => {
+                bubble.style.opacity = 0;
+                bubble.style.transform = "translateY(20px)";
+
+                setTimeout(() => {
+                    bubble.style.opacity = 1;
+                    bubble.style.transform = "translateY(0)";
+                }, 400 * index);
+            });
+        },
+    },
     mounted() {
         // 自动滚动到底部
         // this.$refs.chatBox.scrollTop = this.$refs.chatBox.scrollHeight;
-
-        // 逐一显示聊天气泡
-        const chatBubbles = document.querySelectorAll('.chat-box .message');
-        chatBubbles.forEach((bubble, index) => {
-            bubble.style.opacity = 0;
-            bubble.style.transform = "translateY(20px)";
-
-            setTimeout(() => {
-                bubble.style.opacity = 1;
-                bubble.style.transform = "translateY(0)";
-            }, 400 * index);
-        });
+        this.replay();
     }
 
 

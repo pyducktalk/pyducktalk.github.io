@@ -5,7 +5,7 @@ titleTemplate:
 hero:
   name: 抗压训练指南
   text: 我真觉得没问题
-  tagline: 观前需要保证自己不是高血压
+  tagline: 观前需要保证自己不是高血压 本站以主人公身份作为主角进行展开 这样代入可以使血压迅速升高
   image:
     src: /logo.png
     alt: none
