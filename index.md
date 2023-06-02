@@ -9,13 +9,17 @@ hero:
   image:
     src: /logo.png
     alt: none
-   
+  actions:
+    - theme: brand
+      text: 示例页
+      link: /talklist   
 # Could add features description here
 features:
   - title: 观前需要保证自己不是高血压
     # icon: 🥂
     details: 大家好，这是 pyduck (可达鸭) 的历史典籍，以及极其容易让人产生高血压的话语。  
-
+    link: /talklist
+    linkText: 随便写个示例先看看吧
 ---
 
 
