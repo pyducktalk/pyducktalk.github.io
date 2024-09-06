@@ -28,7 +28,7 @@ jobs:
           # 选择要使用的 node 版本
           node-version: 16
 
-      - uses: pnpm/action-setup@v2.2.4
+      - uses: pnpm/action-setup@v2.4.1
         name: Install pnpm
         id: pnpm-install
         with:
@@ -44,7 +44,7 @@ jobs:
         run: pnpm build
 
       - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+        uses: crazy-max/ghaction-github-pages@v3.2.0
         with:
           target_branch: gh-pages
           jekyll: false
