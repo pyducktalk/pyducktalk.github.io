@@ -28,7 +28,7 @@ jobs:
           # 选择要使用的 node 版本
           node-version: 16
 
-      - uses: pnpm/action-setup@v2.4.1
+      - uses: pnpm/action-setup@v4.0.0
         name: Install pnpm
         id: pnpm-install
         with:
